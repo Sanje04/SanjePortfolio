@@ -55,6 +55,19 @@
                     font-style: inherit;
                     color: crimson;
                 }
+
+                .ityped-cursor {
+                    animation: blink 1s infinite
+                }
+
+                @keyframes blink {
+                    100%{
+                        opacity: 0;
+                    }
+                    50%{
+                        opacity: 100;
+                    }
+                }
             }
         }
         #ExpandMoreSharp {
