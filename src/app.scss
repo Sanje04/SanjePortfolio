@@ -6,14 +6,17 @@ html{
     &::-webkit-scrollbar {
         display: none;
     }
+    width: 100vh;
+    overflow-x: hidden;
 }
 
 .app{
     height: 100vh;
+    width: 100vh;
 }
 
 .sections{
-    width: 100%;
+    width: 100vh;
     height: calc(100vh - 70px);
     background-color: lightgray;
     position: relative;
