@@ -11,7 +11,7 @@ export default function Intro() {
             showCursor: true, 
             backDelay: 1500,
             backSpeed: 60,
-            strings: ['Software Developer', 'Computer Engineer', 'Software Engineer', 'Student'] ,
+            strings: ['Software Developer', 'Computer Engineer', 'Software Engineer', '2nd Year Waterloo Student'] ,
             
         });
     }, []);
