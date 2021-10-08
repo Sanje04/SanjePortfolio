@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .intro{
     background-color: white;
     display: flex;
@@ -10,7 +12,7 @@
         .imgContainer{
             width: 700px;
             height: 700px; 
-            background-color: crimson;
+            background-color: rgb(217, 138, 236);
             border-radius: 50%;
             display: flex;
             align-items: flex-end;
@@ -53,7 +55,7 @@
 
                 span {
                     font-style: inherit;
-                    color: crimson;
+                    color: $mainColour;
                 }
 
                 .ityped-cursor {
