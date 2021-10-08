@@ -4,6 +4,11 @@
     background-color: white;
     display: flex;
 
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .left{
         flex: 0.5;
         overflow: hidden;
@@ -22,11 +27,18 @@
             right: 150px;
             top: 80px;
             
+            @include mobile{
+                align-items: flex-start;
+            }
 
             img{
                 position: relative;
                 top: -90px;
                 height: 80%;
+
+                @include mobile{
+                    height: 50%;
+                }
             }
         }
 
@@ -38,20 +50,30 @@
         .wrapper{
             width: 100%;
             height: 100%;
-            padding-left: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
 
+            @include mobile {
+                padding-left: 0;
+                align-items: center;
+
+            }
             h1 {
                 font-size: 60px;
                 margin: 10px 0;
+                @include mobile{
+                    font-size: 40px;
+                }
             }
             h2 {
                 font-size: 35px;
             }
             h3 {
                 font-size: 30px;
+                @include mobile{
+                    font-size: 20px;
+                }
 
                 span {
                     font-style: inherit;
