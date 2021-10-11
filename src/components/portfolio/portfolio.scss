@@ -21,6 +21,7 @@
         display: flex;
 
         @include mobile {
+            margin: 10px 0;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -46,6 +47,10 @@
         justify-content: center;
         flex-wrap: wrap;
 
+        @include mobile{
+            width: 100%;
+        }
+
         .item{
             width: 220px;
             height: 150px;
@@ -59,6 +64,11 @@
             position: relative;
             transition: all .5s ease;
             cursor: pointer;
+
+            @include mobile {
+                width: 130px;
+                height: 100px;
+            }
 
             h3{
                 position: absolute;
