@@ -1,7 +1,7 @@
 import "./portfolio.scss"
 import PortfolioList from '../portfolioList/PortfolioList';
 import { useState, useEffect } from "react";
-import { featuredPortfolio, reactWork, javaWork, pythonWork, cppWork, jsWork } from '../../data.js';
+import { featuredPortfolio, reactWork, javaWork, cppWork, jsWork } from '../../data.js';
 
 export default function Portfolio() {
     const [selected, setSelected] = useState("featured");
@@ -18,10 +18,6 @@ export default function Portfolio() {
         {
             id: "java",
             title: "Java Work"
-        },
-        {
-            id: "python",
-            title: "Python Work"
         },
         {
             id: "cpp",
@@ -45,9 +41,6 @@ export default function Portfolio() {
             case "java":
                 setData(javaWork);
                 break
-            case "python":
-                setData(pythonWork);
-                break;
             case "cpp":
                 setData(cppWork);
                 break;
@@ -59,6 +52,7 @@ export default function Portfolio() {
         }
 
     },[selected])
+
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>
@@ -74,13 +68,15 @@ export default function Portfolio() {
             </ul>
             <div className="container">
                 {data.map(d=>(
-                    <div className="item">
-                        <img 
-                            src={d.img}
-                            alt="" 
-                        />
-                        <h3>{d.title}</h3>
-                    </div>
+                    <a href={d.link} rel="noopener noreferrer" target="_blank">
+                        <div className="item" >
+                            <img 
+                                src={d.img}
+                                alt=""
+                            />
+                            <h3>{d.title}</h3>
+                        </div>
+                    </a>
                 ))}
             </div>
         </div>
