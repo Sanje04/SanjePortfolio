@@ -23,18 +23,22 @@
             align-items: flex-end;
             justify-content: center;
             float: right;
-            position: relative;
-            right: 150px;
-            top: 80px;
+            align-self: flex-end;
+            position: absolute;
+            left: -20px;
+            bottom: 0px;
+            overflow: hidden;
             
             @include mobile{
                 align-items: flex-start;
             }
 
             img{
-                position: relative;
-                top: -90px;
-                height: 80%;
+                position: absolute;
+                top: 110px;
+                //right: 10px;
+                height: 100%;
+                overflow: hidden;
 
                 @include mobile{
                     height: 50%;
@@ -50,6 +54,7 @@
         .wrapper{
             width: 100%;
             height: 100%;
+            padding-left: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
